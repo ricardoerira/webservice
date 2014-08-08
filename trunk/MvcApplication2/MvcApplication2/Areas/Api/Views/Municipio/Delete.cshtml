@@ -1,0 +1,39 @@
+﻿@model MvcApplication2.Areas.Api.Models.Municipio
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Municipio</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.mun_nombre)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.mun_nombre)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.est_codigo)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.est_codigo)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Departamentos.dep_nombre)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Departamentos.dep_nombre)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

@@ -1,0 +1,51 @@
+﻿@model MvcApplication2.Areas.Api.Models.Departamento
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Departamento</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.dep_nombre)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.dep_nombre)
+            @Html.ValidationMessageFor(model => model.dep_nombre)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.est_codigo)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.est_codigo)
+            @Html.ValidationMessageFor(model => model.est_codigo)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.paisId, "Paises")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("paisId", String.Empty)
+            @Html.ValidationMessageFor(model => model.paisId)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -1,0 +1,111 @@
+﻿@model IEnumerable<MvcApplication2.Areas.Api.Models.Usuario>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.usu_nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.usu_apellido)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TipoDocumentos.tipo_doc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.usu_identificacion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TipoUsuarios.tusu_nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.usu_fnacimiento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sex_codigo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.usu_celular)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Municipios.mun_nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.idfacebook)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.idtwitter)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.usu_username)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.usu_passwd)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.est_codigo)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.usu_nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.usu_apellido)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TipoDocumentos.tipo_doc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.usu_identificacion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TipoUsuarios.tusu_nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.usu_fnacimiento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sex_codigo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.usu_celular)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Municipios.mun_nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.idfacebook)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.idtwitter)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.usu_username)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.usu_passwd)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.est_codigo)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.usuarioId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.usuarioId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.usuarioId })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,141 @@
+﻿@model MvcApplication2.Areas.Api.Models.Usuario
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Usuario</legend>
+
+        @Html.HiddenFor(model => model.usuarioId)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.usu_nombre)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.usu_nombre)
+            @Html.ValidationMessageFor(model => model.usu_nombre)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.usu_apellido)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.usu_apellido)
+            @Html.ValidationMessageFor(model => model.usu_apellido)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.tipoDocumentoId, "TipoDocumentos")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("tipoDocumentoId", String.Empty)
+            @Html.ValidationMessageFor(model => model.tipoDocumentoId)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.usu_identificacion)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.usu_identificacion)
+            @Html.ValidationMessageFor(model => model.usu_identificacion)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.tipoUsuarioId, "TipoUsuarios")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("tipoUsuarioId", String.Empty)
+            @Html.ValidationMessageFor(model => model.tipoUsuarioId)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.usu_fnacimiento)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.usu_fnacimiento)
+            @Html.ValidationMessageFor(model => model.usu_fnacimiento)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.sex_codigo)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.sex_codigo)
+            @Html.ValidationMessageFor(model => model.sex_codigo)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.usu_celular)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.usu_celular)
+            @Html.ValidationMessageFor(model => model.usu_celular)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.municipioId, "Municipios")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("municipioId", String.Empty)
+            @Html.ValidationMessageFor(model => model.municipioId)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.idfacebook)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.idfacebook)
+            @Html.ValidationMessageFor(model => model.idfacebook)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.idtwitter)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.idtwitter)
+            @Html.ValidationMessageFor(model => model.idtwitter)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.usu_username)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.usu_username)
+            @Html.ValidationMessageFor(model => model.usu_username)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.usu_passwd)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.usu_passwd)
+            @Html.ValidationMessageFor(model => model.usu_passwd)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.est_codigo)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.est_codigo)
+            @Html.ValidationMessageFor(model => model.est_codigo)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

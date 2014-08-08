@@ -1,0 +1,113 @@
+﻿@model MvcApplication2.Areas.Api.Models.Usuario
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Usuario</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.usu_nombre)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.usu_nombre)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.usu_apellido)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.usu_apellido)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TipoDocumentos.tipo_doc)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TipoDocumentos.tipo_doc)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.usu_identificacion)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.usu_identificacion)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TipoUsuarios.tusu_nombre)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TipoUsuarios.tusu_nombre)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.usu_fnacimiento)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.usu_fnacimiento)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.sex_codigo)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.sex_codigo)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.usu_celular)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.usu_celular)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Municipios.mun_nombre)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Municipios.mun_nombre)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.idfacebook)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.idfacebook)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.idtwitter)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.idtwitter)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.usu_username)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.usu_username)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.usu_passwd)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.usu_passwd)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.est_codigo)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.est_codigo)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.usuarioId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
