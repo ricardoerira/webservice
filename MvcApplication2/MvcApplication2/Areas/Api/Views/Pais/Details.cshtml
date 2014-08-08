@@ -1,0 +1,29 @@
+﻿@model MvcApplication2.Areas.Api.Models.Pais
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Pais</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.pai_nombre)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.pai_nombre)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.est_codigo)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.est_codigo)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.paisId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

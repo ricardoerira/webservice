@@ -1,0 +1,29 @@
+﻿@model MvcApplication2.Areas.Api.Models.TipoIdentificacion
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>TipoIdentificacion</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.tide_nombre)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.tide_nombre)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.est_codigo)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.est_codigo)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.tipoidentificacionId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

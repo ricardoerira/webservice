@@ -1,0 +1,36 @@
+﻿@model MvcApplication2.Areas.Api.Models.Departamento
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Departamento</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.dep_nombre)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.dep_nombre)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.est_codigo)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.est_codigo)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Paises.pai_nombre)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Paises.pai_nombre)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.departamentoId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

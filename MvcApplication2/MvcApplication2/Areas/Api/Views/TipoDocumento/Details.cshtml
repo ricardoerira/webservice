@@ -1,0 +1,29 @@
+﻿@model MvcApplication2.Areas.Api.Models.TipoDocumento
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>TipoDocumento</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.tipo_doc)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.tipo_doc)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.est_codigo)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.est_codigo)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.tipoDocumentoId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
